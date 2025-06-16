@@ -1,7 +1,7 @@
 # Contributing to Bluewater Framework
 
-Thank you for considering a contribution to the Bluewater Framework!  
-We welcome code improvements, bug reports, documentation updates, and new ideas.
+Thank you for considering a contribution to the Bluewater Framework!
+We welcome code, documentation, and suggestions.
 
 ---
 
@@ -30,7 +30,7 @@ We welcome code improvements, bug reports, documentation updates, and new ideas.
      ```bash
      pip install -r requirements.txt
      ```
-   * Or, run the provided batch file for Windows:
+   * Or, for Windows users, run:
 
      ```
      preview-docs.bat
@@ -44,12 +44,47 @@ We welcome code improvements, bug reports, documentation updates, and new ideas.
 
 ---
 
-## 🛠️ Technical Documentation Workflow
+## 🛠️ Git Hooks Setup
 
-* **All technical documentation** for the framework lives in the `/technical/` directory of this repository.
+To ensure code and documentation quality, Bluewater Framework uses **pre-commit hooks** for formatting, metadata insertion, and doc linting.
+
+**How to set up Git hooks:**
+
+* **Linux/macOS:**
+  Run from your repo root:
+
+  ```bash
+  .githooks/setup-hooks.sh
+  ```
+
+* **Windows:**
+  Double-click or run:
+
+  ```
+  .githooks\setup-hooks.bat
+  ```
+
+**What this does:**
+
+* Installs and updates all Git hooks (including robust pre-commit checks).
+* Ensures “Last Modified” tokens are up to date.
+* Blocks commits with missing doc metadata or structure problems.
+* Works across all major platforms.
+
+If you update or add new hooks to `.githooks/`, re-run the above command/script.
+
+---
+
+*For details on the pre-commit policy and hooks, see [.githooks/README.md](.githooks/README.md) or the top of each script file.*
+
+---
+
+## 📝 Technical Documentation
+
+* **All technical documentation** for the framework lives in the `/technical/` directory.
 * Preview, edit, and improve docs locally—see above for setup.
 * **Do not edit `/docs/` directly.**
-  It is auto-generated in the publication process (see [SYNC\_PROCESS.md](https://github.com/BluewaterMVC/bluewater-docs/blob/main/SYNC_PROCESS.md)).
+  It is auto-generated in the publication process ([SYNC\_PROCESS.md](https://github.com/BluewaterMVC/bluewater-docs/blob/main/SYNC_PROCESS.md)).
 
 ---
 
@@ -65,6 +100,17 @@ We welcome code improvements, bug reports, documentation updates, and new ideas.
 
 ---
 
+## 🌐 Translating Documentation
+
+- All new docs should be created in `/en/` (English) first.
+- To add a translation, create a mirror file in the appropriate `/es/`, `/fr/`, etc. subfolder.
+- Use the [Translation Request template](.github/ISSUE_TEMPLATE/translation_request.md) for new or updated translations.
+- Ensure the folder/file structure matches the English original.
+- All translation PRs are reviewed for accuracy before merge.
+- See [i18n Contribution Guide](docs/en/contribute/i18n.md) for tips and standards.
+
+---
+
 ## 🤝 Pull Request Process
 
 1. Branch from `main`.
@@ -74,6 +120,23 @@ We welcome code improvements, bug reports, documentation updates, and new ideas.
 5. Submit your pull request to `main`.
 
 All PRs are subject to code review.
+
+For details on how the Bluewater project is managed—including roles, decision-making, issue triage, and release process—see our [GOVERNANCE.md](./GOVERNANCE.md).
+
+---
+
+## 🔀 Branching & Workflow
+
+All contributions should follow the official branching process described in [WORKFLOW.md](./WORKFLOW.md):
+
+- **Branch from `main`** for features, fixes, documentation, or refactoring.
+- **Use descriptive branch names** (e.g. `feature/api-auth`, `bugfix/router`, `docs/quickstart-update`).
+- **Push your branch** and open a Pull Request (PR) to `main`.
+- **Choose the appropriate PR template** for your change (feature, bugfix, docs, etc.).
+- All PRs are reviewed and must pass automated checks before merging.
+- The `main` branch is always stable and deployable.
+
+For the full, step-by-step workflow (with examples), see [WORKFLOW.md](./WORKFLOW.md).
 
 ---
 

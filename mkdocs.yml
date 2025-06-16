@@ -1,8 +1,10 @@
 site_name: Bluewater Technical Documentation
-docs_dir: technical
+site_url: https://bluewatermvc.github.io/bluewater-framework/
+docs_dir: docs/en
 
 theme:
   name: material
+  language: en
   palette:
     primary: blue
     accent: light blue
@@ -11,9 +13,72 @@ theme:
     - navigation.instant
     - search.suggest
     - search.highlight
+  icon:
+    repo: fontawesome/brands/github
 
-# Add your logo here if desired
-# logo: images/logo.png
+repo_name: BluewaterMVC/bluewater-framework
+repo_url: https://github.com/BluewaterMVC/bluewater-framework
+edit_uri: edit/main/docs/en/
+
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        es: Español
+        fr: Français
+        de: Deutsch
+        ru: Русский
+      nav_translations:
+        es:
+          Home: Inicio
+          Getting Started: Comenzar
+          Configuration Guide: Guía de Configuración
+          Extending & Integration: Extensión e Integración
+          Deployment & Operations: Despliegue
+          FAQ & Troubleshooting: Preguntas Frecuentes
+          Examples: Ejemplos
+          Example 1: Ejemplo 1
+          Example 2: Ejemplo 2
+          Contributing: Contribuyendo
+          Internationalization (i18n): Internacionalización (i18n)
+        fr:
+          Home: Accueil
+          Getting Started: Démarrage
+          Configuration Guide: Guide de Configuration
+          Extending & Integration: Extensions
+          Deployment & Operations: Déploiement
+          FAQ & Troubleshooting: FAQ
+          Examples: Exemples
+          Example 1: Exemple 1
+          Example 2: Exemple 2
+          Contributing: Contribution
+          Internationalization (i18n): Internationalisation (i18n)
+        de:
+          Home: Startseite
+          Getting Started: Erste Schritte
+          Configuration Guide: Konfigurationshandbuch
+          Extending & Integration: Erweiterung
+          Deployment & Operations: Bereitstellung
+          FAQ & Troubleshooting: FAQ
+          Examples: Beispiele
+          Example 1: Beispiel 1
+          Example 2: Beispiel 2
+          Contributing: Mitwirken
+          Internationalization (i18n): Internationalisierung (i18n)
+        ru:
+          Home: Главная
+          Getting Started: Начало работы
+          Configuration Guide: Руководство по настройке
+          Extending & Integration: Расширение
+          Deployment & Operations: Развертывание
+          FAQ & Troubleshooting: Часто задаваемые вопросы
+          Examples: Примеры
+          Example 1: Пример 1
+          Example 2: Пример 2
+          Contributing: Участие
+          Internationalization (i18n): Интернационализация (i18n)
 
 nav:
   - Home: index.md
@@ -25,24 +90,21 @@ nav:
   - Examples:
       - Example 1: examples/example1.md
       - Example 2: examples/example2.md
+  - Contributing:
+      - Internationalization (i18n): contribute/i18n.md
 
 markdown_extensions:
   - admonition
-  - codehilite
   - toc:
       permalink: true
-  - footnotes
+  - codehilite
   - tables
+  - footnotes
 
 extra_css:
-  - css/custom.css   # (Optional: add if you create /technical/css/custom.css)
+  - css/custom.css
 
-# Optional: Set site URL for deployment
-# site_url: https://BluewaterMVC.github.io/bluewater-framework/
-
-# Optional: Repository link
-repo_url: https://github.com/BluewaterMVC/bluewater-framework
-repo_name: Bluewater Framework
-
-# Optional: Edit on GitHub button
-edit_uri: edit/main/technical/
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/BluewaterMVC/bluewater-framework

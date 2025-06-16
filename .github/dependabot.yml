@@ -1,0 +1,23 @@
+# .github/dependabot.yml
+
+version: 2
+updates:
+  # Composer (PHP dependencies)
+  - package-ecosystem: "composer"
+    directory: "/"                # Location of composer.json
+    schedule:
+      interval: "weekly"          # Check for updates once a week
+    open-pull-requests-limit: 5
+    assignees:
+      - phpwalter      # Replace with your GitHub username
+
+  # pip (Python dependencies for docs)
+  - package-ecosystem: "pip"
+    directory: "/"                # Location of requirements.txt
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+    assignees:
+      - phpwalter      # Replace with your GitHub username
+
+# You can add more ecosystems (npm, docker, etc.) as your project grows!
