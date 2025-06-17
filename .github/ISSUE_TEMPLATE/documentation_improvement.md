@@ -1,35 +1,41 @@
 ---
-name: 📝 Documentation Improvement
-about: Suggest an edit, correction, or addition to Bluewater documentation
-title: "[Docs]: "
+name: Documentation Improvement
+about: Suggest an improvement or fix for project documentation
+title: "[DOC] <brief description>"
 labels: documentation
+assignees: ''
 ---
 
-## Describe the documentation change
+## Documentation topic or file
 
-What section, guide, or document needs improvement?  
-Be specific: include file names, URLs, or headings where possible.
+<!-- E.g., /docs/en/quickstart.md or 'API Reference' section. -->
 
-## Current content (if relevant)
+## Current content
 
-Paste the current content (or a snippet) that you think should be improved.
+<!-- Paste the relevant content (or summarize) that needs improvement. -->
 
 ## Suggested improvement
 
-Describe your proposed change or addition.  
-If possible, suggest the exact wording or content you’d like to see.
+<!-- Describe your suggestion. Please provide exact text, code, or screenshot. -->
 
-## Reason for change
+## Why is this change necessary?
 
-Why is this change important?  
-(e.g., corrects an error, improves clarity, adds missing info, helps new users)
+<!-- Explain the reason or benefit for the improvement. -->
 
-## Additional context or resources
+## Additional context
 
-Links, screenshots, external references, or examples that support your suggestion.
+<!-- Any other details, related guides, or user experience impact. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Before submitting, **review [open documentation issues](../issues?q=is%3Aissue+label%3Adocumentation)** to avoid duplicates.
 
-*Last updated: {{DATE}}*
+For translation-related suggestions, please use the [Translation Request template](translation_request.md).
+
+See our [Documentation Contribution Guide](../../CONTRIBUTING.md#documentation) for standards.
+
+By submitting this issue, you agree to follow the project’s [Code of Conduct](../../CODE_OF_CONDUCT.md).
+
+---
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_

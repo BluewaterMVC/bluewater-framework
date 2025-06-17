@@ -1,35 +1,40 @@
 ---
-name: 🛠️ Refactor Proposal
-about: Suggest a major reorganization, overhaul, or structural change to the documentation
-title: "[Refactor]: "
+name: Refactor Proposal
+about: Suggest a code or documentation refactor
+title: "[REFACTOR] <area/filename>"
 labels: refactor
+assignees: ''
 ---
 
-## What needs to be refactored?
+## Area to refactor
 
-Describe the files, sections, or areas needing major restructuring.
+<!-- File, module, or doc section needing refactor. -->
 
 ## Motivation
 
-Why is this refactor needed?  
-(e.g., improves navigation, reduces duplication, aligns with project growth)
+<!-- Why is this refactor needed? (technical debt, maintainability, consistency, etc.) -->
 
 ## Proposed approach
 
-How do you suggest restructuring or reorganizing?  
-Provide a new outline, file tree, or example if possible.
+<!-- High-level summary of how you’d approach the refactor. -->
 
-## Risks and mitigation
+## Risks or concerns
 
-Are there risks (e.g., broken links, merge conflicts)?  
-How can we reduce those risks?
+<!-- Any migration, backward-compatibility, or disruption concerns. -->
 
-## Additional notes
+## Additional context
 
-Anything else to consider—timing, dependencies, related issues?
+<!-- Any links, test cases, or related issues. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Before submitting, **search [open refactor issues](../issues?q=is%3Aissue+label%3Arefactor)** to avoid duplicates.
 
-*Last updated: {{DATE}}*
+Refer to [Contributing Guidelines](../../CONTRIBUTING.md) for refactor review standards.
+
+By submitting this issue, you agree to follow the [Code of Conduct](../../CODE_OF_CONDUCT.md).
+
+---
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_
+4

@@ -1,32 +1,33 @@
 ---
-name: 🔧 Task / Chore / Refactor
-about: Propose a maintenance, clean-up, or refactor task for Bluewater documentation
-title: "[Task]: "
+name: Task
+about: Propose a specific project task (not a feature, bug, or refactor)
+title: "[TASK] <brief description>"
 labels: task
+assignees: ''
 ---
 
-## Describe the task
+## Task description
 
-What is the maintenance, clean-up, or refactor you are proposing?  
-Is this about reorganizing docs, renaming files, updating formatting, or something else?
+<!-- What needs to be done? Be specific. -->
 
-## Motivation
+## Rationale
 
-Why is this task needed?  
-(e.g., keeps docs organized, improves navigation, prepares for future changes)
+<!-- Why is this task necessary for the project? -->
 
-## Scope
+## Acceptance criteria
 
-What files, folders, or sections are affected?  
-List specific areas or describe the scope (entire docs, technical guides, etc.).
+<!-- What must be true for this task to be considered complete? -->
 
-## Additional notes
+## Additional context
 
-Anything else the team should consider?  
-Potential side effects, dependencies, or follow-up actions?
+<!-- Any details, dependencies, or links. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Please **review [open tasks](../issues?q=is%3Aissue+label%3Atask)** before filing a new one.
 
-*Last updated: {{DATE}}*
+By submitting this issue, you agree to follow the project’s [Code of Conduct](../../CODE_OF_CONDUCT.md) and [Contributing Guidelines](../../CONTRIBUTING.md).
+
+---
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_

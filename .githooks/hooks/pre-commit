@@ -7,6 +7,55 @@ NC='\033[0m'
 fail=0
 TODAY=$(date +%F)
 YEAR=$(date +%Y)
+#!/bin/bash
+
+# Bluewater pre-commit hook: Enforce code, PHPDoc, and documentation standards
+
+set -e
+
+echo "=== Running Bluewater pre-commit checks ==="
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+# 1. PHP Syntax and Standards Check
+if command -v php > /dev/null 2>&1; then
+    echo "--- Checking PHP syntax and PSR-12 compliance..."
+    STAGED_PHP_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.php$' || true)
+    if [ -n "$STAGED_PHP_FILES" ]; then
+        for FILE in $STAGED_PHP_FILES; do
+            php -l "$FILE" || { echo "PHP syntax error in $FILE"; exit 1; }
+            if command -v phpcs > /dev/null 2>&1; then
+                phpcs --standard=PSR12 "$FILE" || { echo "PSR-12 code style violation in $FILE"; exit 1; }
+            fi
+        done
+    fi
+fi
+
+# 2. PHPDoc Standards Check
+if command -v phpstan > /dev/null 2>&1; then
+    echo "--- Running PHPStan for code and PHPDoc compliance..."
+    phpstan analyse --no-progress --memory-limit=512M || { echo "PHPStan analysis failed. See errors above."; exit 1; }
+fi
+
+# 3. Markdown Lint (docs)
+if command -v npx > /dev/null 2>&1; then
+    echo "--- Running Markdown lint on staged .md files..."
+    STAGED_MD_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.md$' || true)
+    if [ -n "$STAGED_MD_FILES" ]; then
+        npx markdownlint $STAGED_MD_FILES || { echo "Markdown linting failed. See errors above."; exit 1; }
+    fi
+fi
+
+# 4. Check for forbidden manual changes to /docs/ structure
+FORBIDDEN=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^docs/' | grep -Ev '^docs/(en|[a-z]{2,5})/.*\.md$' || true)
+if [ -n "$FORBIDDEN" ]; then
+    echo "Error: Manual changes to /docs/ structure or non-markdown files detected."
+    echo "Please use /tools/i18n/sync_docs_structure.py for docs structure and automation."
+    exit 1
+fi
+
+echo "All Bluewater pre-commit checks passed."
+exit 0
 
 # Only check files staged for commit
 files=$(git diff --cached --name-only --diff-filter=ACM)

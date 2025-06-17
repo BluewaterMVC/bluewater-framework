@@ -1,8 +1,8 @@
----
 name: 🚀 Feature PR
 about: Submit a new feature or enhancement
 title: "[Feature] <your-title-here>"
 labels: enhancement, feature
+
 ---
 
 ## 🚀 Feature Overview
@@ -25,12 +25,22 @@ _Add images or links if visual or UI feature._
 
 ## Checklist
 
-- [ ] Unit/integration tests added/updated
-- [ ] Docs updated in `/technical/`
-- [ ] Related issues linked (if any)
-- [ ] Changelog entry added/updated
-- [ ] Feature is backward compatible (if possible)
-- [ ] Pre-commit checks/hook ran and passed
+- [ ] This PR is focused and atomic—one feature only.
+- [ ] Feature is fully documented in `/docs/{lang}` and with code comments/PHPDoc.
+- [ ] All new/changed code follows [PSR-12](https://www.php-fig.org/psr/psr-12/) and [Bluewater PHPDoc standards](../../docs/en/contribute/phpdoc.md).
+- [ ] `declare(strict_types=1);` in all new PHP files.
+- [ ] Unit/integration tests provided and pass locally and in CI.
+- [ ] All pre-commit hooks/checks and CI/CD passed.
+- [ ] No manual changes to `/docs/` or generated files (must use automation).
+- [ ] Structure and navigation updated for all docs and i18n if applicable (run `/tools/i18n/sync_docs_structure.py`).
+- [ ] Changes comply with [CONTRIBUTING.md](../../CONTRIBUTING.md) and [SYNC_PROCESS.md](../../SYNC_PROCESS.md).
+- [ ] PR title and description are clear and actionable.
+
+---
+
+## Additional Notes
+
+<!-- Screenshots, rendered output, or reviewer notes. -->
 
 ---
 

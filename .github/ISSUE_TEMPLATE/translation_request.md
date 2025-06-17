@@ -1,35 +1,36 @@
 ---
-name: 🌐 Translation Request
-about: Suggest a new translation or improvement to existing translated documentation
-title: "[Translation]: "
+name: Translation Request
+about: Request a translation or update to a non-English documentation file
+title: "[TRANSLATION] <language/file>"
 labels: translation
+assignees: ''
 ---
 
-## Language
+## File(s) to translate
 
-Which language are you requesting (or improving)?
+<!-- List files/sections and target language(s) needed. -->
 
-## Target Document(s)
+## Priority/urgency
 
-What documentation or section needs translation?
-(e.g., "technical/getting-started.md", or "All guides under architecture/")
+<!-- If this is blocking other work or needed soon, explain why. -->
 
-## Reason for translation
+## Are you able to help with translation?
 
-Why is this translation needed?  
-(e.g., broadens accessibility, helps a specific community, corrects errors in existing translation)
-
-## Are you able to help?
-
-- [ ] I can contribute this translation
-- [ ] I need help from the community or maintainers
+- [ ] Yes
+- [ ] No
 
 ## Additional context
 
-Add any links, resources, or translation memory/glossary info.
+<!-- Any glossary, prior translations, screenshots, or process references. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Before submitting, **review [open translation issues](../issues?q=is%3Aissue+label%3Atranslation)** to avoid duplicates.
 
-*Last updated: {{DATE}}*
+See our [Translation Guide](../../docs/en/contribute/i18n.md) for how to help.
+
+By submitting this issue, you agree to follow the [Code of Conduct](../../CODE_OF_CONDUCT.md) and [Contributing Guidelines](../../CONTRIBUTING.md).
+
+---
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_

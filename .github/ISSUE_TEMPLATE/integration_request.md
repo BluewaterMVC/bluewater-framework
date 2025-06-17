@@ -1,34 +1,39 @@
 ---
-name: 🔌 Integration/Compatibility Request
-about: Suggest supporting or documenting integration with another tool, service, or framework
-title: "[Integration]: "
+name: Integration Request
+about: Propose integration with another platform, library, or tool
+title: "[INTEGRATION] <system/tool>"
 labels: integration
+assignees: ''
 ---
 
-## What do you want to integrate with Bluewater?
+## Integration target
 
-Specify the tool, service, library, or platform.
+<!-- Name and description of the platform/tool/library for integration. -->
 
-## Integration type
+## What problem would this integration solve?
 
-- [ ] Code (e.g., new API, SDK, library)
-- [ ] Documentation (guide for third-party integration)
-- [ ] Compatibility (test/support with an external system)
+<!-- Explain how this integration would benefit Bluewater users. -->
 
-## Why is this integration important?
+## Existing workarounds
 
-Explain the benefit for users, the community, or the project.
+<!-- Any current methods for achieving similar functionality. -->
 
-## Existing resources
+## References or prior art
 
-Are there docs, SDKs, or prior work we can use as a reference?
+<!-- Links to APIs, docs, or similar integrations elsewhere. -->
 
 ## Additional context
 
-Links, screenshots, or examples for how this would work.
+<!-- Any other context, user demand, or expected scope/complexity. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Before submitting, **search [open integration issues](../issues?q=is%3Aissue+label%3Aintegration)** to avoid duplicates.
 
-*Last updated: {{DATE}}*
+For more info, see our [Integration Guidelines](../../docs/en/contribute/integration.md) and [Contributing Guidelines](../../CONTRIBUTING.md).
+
+By submitting this issue, you agree to follow the [Code of Conduct](../../CODE_OF_CONDUCT.md).
+
+---
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_

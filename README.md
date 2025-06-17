@@ -1,143 +1,122 @@
-![Framework](https://img.shields.io/badge/framework-Bluewater-lightblue?logo=dropbox&logoColor=white)
-![Status](https://img.shields.io/badge/status-active-blue)
-![Version](https://img.shields.io/badge/version-1.0-blue?logo=semantic-release&logoColor=white)
+# Bluewater
 
-![Language](https://img.shields.io/badge/language-PHP%208.2+-blue?logo=php&logoColor=white)
-![OpenAPI](https://img.shields.io/badge/API-OpenAPI_3-green?logo=openapiinitiative&logoColor=white)
-
-![License](https://img.shields.io/badge/license-MIT-green?logo=open-source-initiative&logoColor=white)
-![Docs](https://img.shields.io/badge/docs-Available-brightgreen?logo=readthedocs&logoColor=white)
-
-![Multi-Tenant](https://img.shields.io/badge/multi--tenant-enabled-blue?logo=archlinux&logoColor=white)
-![Security](https://img.shields.io/badge/security-Middleware--Driven-important?logo=auth0&logoColor=white)
-![Auth](https://img.shields.io/badge/auth-JWT%20%7C%20OAuth-blue?logo=auth0&logoColor=white)
-
-![Tests](https://img.shields.io/badge/tests-not%20configured-lightgrey?logo=githubactions&logoColor=white)
-![Coverage](https://img.shields.io/badge/coverage-N/A-lightgrey?logo=codecov&logoColor=white)
-![CI](https://img.shields.io/badge/ci-GitHub_Actions-blue?logo=githubactions&logoColor=white)
-
-![Composer](https://img.shields.io/badge/Dependency-Composer-orange?logo=composer&logoColor=white)
-![Docker](https://img.shields.io/badge/Container-Docker-blue?logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Orchestration-Kubernetes-blue?logo=kubernetes&logoColor=white)
+**A modern, robust, and scalable platform for application architecture, documentation, and development.**  
+Bluewater empowers teams to build and document high-quality PHP applications with multi-language support, strict standards, and powerful automation.
 
 ---
 
-# 🌊 Bluewater Framework
+## Vision
 
-Welcome to the official **Bluewater Framework** repository—a modern, lightweight, multi-tenant backend platform for high-performance API-driven SaaS.
-
-> **A good framework gets out of your way. A great one lets you see how it works.**
-
----
-
-## ✨ Key Features
-
-- **Fast:** Boot times under 50ms, sub-10ms API responses
-- **Lightweight:** No magic, no bloat, full transparency
-- **Modular:** Swap any component via Composer/PSR-4
-- **Multi-Tenant:** First-class support for client isolation
-- **Secure:** Middleware-driven, JWT/OAuth2 support, RBAC, rate limiting
-- **API-First:** OpenAPI 3, unified JSON output, robust routing
-- **Extensible:** Bring your own ORM, cache, queue, and auth libraries
-- **Cloud Native:** Ready for Docker, Kubernetes, CI/CD
+Bluewater’s mission is to set a new standard in collaborative, maintainable, and multi-language PHP development.  
+We provide a transparent, process-driven foundation for both architecture and implementation—so projects stay healthy, accessible, and future-proof from day one.
 
 ---
 
-## 🚀 Quick Start
+## Key Features
 
-**Requirements:**  
-- PHP 8.2+
-- Composer
+- **Strict Coding & Documentation Standards:**  
+  Enforced via [PSR-12](https://www.php-fig.org/psr/psr-12/), robust PHPDoc, and comprehensive documentation templates.
+- **Multi-Repository Architecture:**  
+  - `bluewater-framework`: All source code, code-level documentation (PHPDoc), and technical assets.
+  - `bluewater-docs`: Architecture, workflow, governance, and user-facing documentation.
+- **Multi-Language Documentation:**  
+  Fully automated language trees in `/docs/{lang}`, managed via custom i18n tooling and sync scripts.
+- **Automation-Driven Workflow:**  
+  Automation scripts enforce structure, update configuration, and validate translations, documentation, and code compliance.
+- **Community and Governance:**  
+  Open decision-making, clear contribution guidelines, and a strong commitment to inclusivity and transparency.
+- **Best-in-Class Security & DevOps:**  
+  Emphasis on secure, scalable, and maintainable solutions for all code and data.
 
-**Install dependencies:**
-```bash
-composer install
+---
+
+## Quick Start
+
+> **All contributors must read [CONTRIBUTING.md](./CONTRIBUTING.md) and [WORKFLOW.md](./WORKFLOW.md) before submitting code or documentation.**
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/bluewatermvc/bluewater-framework.git
+   # or for docs
+   git clone https://github.com/bluewatermvc/bluewater-docs.git
 ````
 
-**Environment setup:**
-Copy `.env.example` to `.env` and configure as needed.
+2. **Install dependencies** (if applicable)
 
-**Serve locally (e.g. with PHP built-in web server):**
+   ```bash
+   composer install
+   # or for docs:
+   pip install -r requirements.txt
+   ```
 
-```bash
-php -S localhost:8000 -t public/
-```
+3. **Run the documentation site locally**
 
----
+   ```bash
+   # From the repository root
+   cd docs
+   mkdocs serve
+   ```
 
-## 📚 Technical Documentation
-
-* Technical docs for contributors live in `/technical/`.
-
-* Preview locally using [MkDocs](https://www.mkdocs.org/):
-
-  **Install prerequisites:**
-
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-  **Preview docs:**
-
-  ```bash
-  mkdocs serve
-  ```
-
-   * Or on Windows:
-
-     ```
-     preview-docs.bat
-     ```
-
-* **Do not edit `/docs/` directly** (it's auto-generated).
+4. **See [Tools README](./tools/i18n/README.md) for i18n sync and automation usage.**
 
 ---
 
-## 🛠️ Git Hooks
+## Documentation
 
-To enforce standards and keep docs/code metadata up to date, set up our robust Git hooks:
-
-* **Linux/macOS:**
-
-  ```bash
-  .githooks/setup-hooks.sh
-  ```
-* **Windows:**
-  Double-click or run:
-
-  ```
-  .githooks\setup-hooks.bat
-  ```
-
-More details: [CONTRIBUTING.md](CONTRIBUTING.md)
+* **Main Documentation:** See `/docs/en/` for the source of truth.
+* **Architecture, workflow, and governance:** `/docs/en/architecture/`, `/docs/en/contribute/`, `/docs/en/workflow/`
+* **PHPDoc Standards:** [docs/en/contribute/phpdoc.md](./docs/en/contribute/phpdoc.md)
+* **Translation Guide:** [docs/en/contribute/i18n.md](./docs/en/contribute/i18n.md)
+* **Contribution Workflow:** [CONTRIBUTING.md](./CONTRIBUTING.md), [WORKFLOW.md](./WORKFLOW.md)
+* **Sync Process & Automation:** [SYNC\_PROCESS.md](./SYNC_PROCESS.md), [Tools README](./tools/i18n/README.md)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-We welcome issues, suggestions, and pull requests!
+We welcome new contributors!
+Before submitting a Pull Request or Issue, please:
 
-* [CONTRIBUTING.md](CONTRIBUTING.md) — Contribution guide, workflow, and code/doc standards
-* [Code of Conduct](CODE_OF_CONDUCT.md)
-* [Security Policy](SECURITY.md)
+* **Read:**
 
-  For details on how the Bluewater project is managed—including roles, decision-making, issue triage, and release process—see our [GOVERNANCE.md](./GOVERNANCE.md).
+  * [CONTRIBUTING.md](./CONTRIBUTING.md)
+  * [WORKFLOW.md](./WORKFLOW.md)
+  * [PHPDoc Standards](./docs/en/contribute/phpdoc.md)
+* **Use:**
 
+  * Provided [issue templates](.github/ISSUE_TEMPLATE/) and [PR templates](.github/PULL_REQUEST_TEMPLATE/)
+  * Automation scripts for i18n and docs structure
+* **Respect:**
+
+  * [Code of Conduct](./CODE_OF_CONDUCT.md)
+  * [Governance](./GOVERNANCE.md)
 
 ---
 
-## 📝 Licensing
+## Community & Support
 
-This project is open-source under the [MIT License](LICENSE).
+* **Discussions:** [GitHub Discussions](https://github.com/bluewatermvc/bluewater-framework/discussions)
+* **Issues & Bugs:** [GitHub Issues](../issues)
+* **Contact:** [contact@bluewatermvc.org](mailto:contact@bluewatermvc.org)
 
 ---
 
-## 🧭 Project Links
+## Governance & Licensing
 
-* [Official Documentation Site](https://BluewaterMVC.github.io/bluewater-docs/)
-* [Architecture & User Docs](https://github.com/BluewaterMVC/bluewater-docs)
-* [API Reference (PHPDocs)](https://docs.bluewaterphp.org/phpdoc/)
-* [Roadmap](https://github.com/BluewaterMVC/bluewater-framework/blob/main/ROADMAP.md)
+* **Governance:** [GOVERNANCE.md](./GOVERNANCE.md)
+* **License:** [Open Software License (OSL 3.0)](./LICENSE)
+* All contributions must comply with project licensing and IP policies.
+
+---
+
+## Badges
+
+<!-- Add project status, CI, code coverage, docs, translation, and other badges as needed here. -->
+
+[![CI](https://github.com/bluewatermvc/bluewater-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/bluewatermvc/bluewater-framework/actions)
+[![Docs Status](https://img.shields.io/badge/docs-en%20%7C%20i18n-brightgreen?style=flat-square)](./docs/en/)
+[![PHPDoc Standards](https://img.shields.io/badge/PHPDoc-Standards-informational?style=flat-square)](./docs/en/contribute/phpdoc.md)
+[![License: OSL 3.0](https://img.shields.io/badge/license-OSL%203.0-blue.svg?style=flat-square)](./LICENSE)
 
 ---
 

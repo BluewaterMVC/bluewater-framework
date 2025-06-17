@@ -1,162 +1,164 @@
-# Contributing to Bluewater Framework
+Certainly. Below is an **authoritative, comprehensive, and modern `CONTRIBUTING.md`** for Bluewater, designed for use in a professional open-source context. This version:
 
-Thank you for considering a contribution to the Bluewater Framework!
-We welcome code, documentation, and suggestions.
-
----
-
-## 📚 Quick Links
-
-- [Official Documentation Site](https://BluewaterMVC.github.io/bluewater-docs/)
-- [Doc Sync Process](https://github.com/BluewaterMVC/bluewater-docs/blob/main/SYNC_PROCESS.md)
-- [Code of Conduct](https://github.com/BluewaterMVC/bluewater-docs/blob/main/CODE_OF_CONDUCT.md)
-- [Security Policy](https://github.com/BluewaterMVC/bluewater-docs/blob/main/SECURITY.md)
+* Explicitly references the PHPDoc standards at every relevant point.
+* Sets expectations for documentation, code style, PRs, issues, and more.
+* Provides clarity for new and experienced contributors.
+* Reflects your architecture (all technical docs live in `/docs/{lang}`).
+* Covers all key contributor responsibilities and processes.
 
 ---
 
-## 🚀 Getting Started
+# Contributing to Bluewater
 
-1. **Fork and clone this repository.**
-2. **Install PHP dependencies:**  
-   ```bash
-   composer install
-   ```
-
-3. **(Optional) Set up for local technical docs preview:**
-
-   * Make sure you have Python 3.x and `pip` installed.
-   * Install MkDocs dependencies:
-
-     ```bash
-     pip install -r requirements.txt
-     ```
-   * Or, for Windows users, run:
-
-     ```
-     preview-docs.bat
-     ```
-   * Or, use:
-
-     ```bash
-     mkdocs serve
-     ```
-   * This will serve the technical docs in `/technical/` at [http://localhost:8000/](http://localhost:8000/).
+Thank you for your interest in contributing to Bluewater!
+This project relies on the active involvement of its community.
+**Please read this guide carefully before submitting issues, code, or documentation.**
 
 ---
 
-## 🛠️ Git Hooks Setup
+## Table of Contents
 
-To ensure code and documentation quality, Bluewater Framework uses **pre-commit hooks** for formatting, metadata insertion, and doc linting.
-
-**How to set up Git hooks:**
-
-* **Linux/macOS:**
-  Run from your repo root:
-
-  ```bash
-  .githooks/setup-hooks.sh
-  ```
-
-* **Windows:**
-  Double-click or run:
-
-  ```
-  .githooks\setup-hooks.bat
-  ```
-
-**What this does:**
-
-* Installs and updates all Git hooks (including robust pre-commit checks).
-* Ensures “Last Modified” tokens are up to date.
-* Blocks commits with missing doc metadata or structure problems.
-* Works across all major platforms.
-
-If you update or add new hooks to `.githooks/`, re-run the above command/script.
+1. [Code of Conduct](#code-of-conduct)
+2. [Where to Start](#where-to-start)
+3. [General Guidelines](#general-guidelines)
+4. [Code Style & Standards](#code-style--standards)
+5. [Documentation Standards](#documentation-standards)
+6. [PHPDoc Standards](#phpdoc-standards)
+7. [Pull Requests](#pull-requests)
+8. [Issues & Feature Requests](#issues--feature-requests)
+9. [Translation & Localization](#translation--localization)
+10. [Sync & Tooling](#sync--tooling)
+11. [Licensing](#licensing)
+12. [Contact](#contact)
 
 ---
 
-*For details on the pre-commit policy and hooks, see [.githooks/README.md](.githooks/README.md) or the top of each script file.*
+## Code of Conduct
+
+Participation in this project is governed by our [Code of Conduct](./CODE_OF_CONDUCT.md).
+We expect all contributors to treat others with respect, inclusivity, and professionalism.
 
 ---
 
-## 📝 Technical Documentation
+## Where to Start
 
-* **All technical documentation** for the framework lives in the `/technical/` directory.
-* Preview, edit, and improve docs locally—see above for setup.
-* **Do not edit `/docs/` directly.**
-  It is auto-generated in the publication process ([SYNC\_PROCESS.md](https://github.com/BluewaterMVC/bluewater-docs/blob/main/SYNC_PROCESS.md)).
-
----
-
-## ✏️ Code Contributions
-
-* Follow [PSR-12](https://www.php-fig.org/psr/psr-12/) coding standards.
-* Use strict types:
-
-  ```php
-  declare(strict_types=1);
-  ```
-* Document your code with PHPDoc, following the Bluewater PHPDoc standards.
+* **New to Bluewater?** Start with the [README](./README.md).
+* Review open [issues](../issues) and [pull requests](../pulls).
+* See our [GOVERNANCE.md](./GOVERNANCE.md) for how decisions are made.
 
 ---
 
-## 🌐 Translating Documentation
+## General Guidelines
 
-- All new docs should be created in `/en/` (English) first.
-- To add a translation, create a mirror file in the appropriate `/es/`, `/fr/`, etc. subfolder.
-- Use the [Translation Request template](.github/ISSUE_TEMPLATE/translation_request.md) for new or updated translations.
-- Ensure the folder/file structure matches the English original.
-- All translation PRs are reviewed for accuracy before merge.
-- See [i18n Contribution Guide](docs/en/contribute/i18n.md) for tips and standards.
+* **Be respectful** and keep all discussions professional.
+* Always search for existing [issues](../issues) before creating new ones.
+* For major changes or features, open an issue or [discussion](../discussions) first.
 
 ---
 
-## 🤝 Pull Request Process
+## Code Style & Standards
 
-1. Branch from `main`.
-2. Write clear commit messages and PR descriptions.
-3. Include tests for new features or bugfixes.
-4. Update or add technical docs in `/technical/` as needed.
-5. Submit your pull request to `main`.
+* All PHP code **must** use `declare(strict_types=1);` at the top of every file.
+* Follow **PSR-12** and all relevant PSR standards.
+* Use clear, modular, testable, and maintainable code.
+* Adhere to [SOLID](https://en.wikipedia.org/wiki/SOLID) and [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principles.
+* Use Composer for dependency management and autoloading.
+* **Security is paramount:** Always sanitize and validate input, use secure authentication, and avoid exposing sensitive data.
+* **See:**
 
-All PRs are subject to code review.
-
-For details on how the Bluewater project is managed—including roles, decision-making, issue triage, and release process—see our [GOVERNANCE.md](./GOVERNANCE.md).
-
----
-
-## 🔀 Branching & Workflow
-
-All contributions should follow the official branching process described in [WORKFLOW.md](./WORKFLOW.md):
-
-- **Branch from `main`** for features, fixes, documentation, or refactoring.
-- **Use descriptive branch names** (e.g. `feature/api-auth`, `bugfix/router`, `docs/quickstart-update`).
-- **Push your branch** and open a Pull Request (PR) to `main`.
-- **Choose the appropriate PR template** for your change (feature, bugfix, docs, etc.).
-- All PRs are reviewed and must pass automated checks before merging.
-- The `main` branch is always stable and deployable.
-
-For the full, step-by-step workflow (with examples), see [WORKFLOW.md](./WORKFLOW.md).
+    * [PHP-FIG: PSR-12](https://www.php-fig.org/psr/psr-12/)
+    * [Bluewater PHPDoc Standards](./docs/en/contribute/phpdoc.md)
 
 ---
 
-## 🛡️ Code of Conduct & Security
+## Documentation Standards
 
-* Please review our [Code of Conduct](https://github.com/BluewaterMVC/bluewater-docs/blob/main/CODE_OF_CONDUCT.md).
-* To report a security vulnerability, please follow our [Security Policy](https://github.com/BluewaterMVC/bluewater-docs/blob/main/SECURITY.md).
-
----
-
-## 📝 Doc Dependencies
-
-* All required Python packages for local documentation preview are listed in [`requirements.txt`](./requirements.txt).
-* If you add new MkDocs plugins, please update `requirements.txt` accordingly.
+* All documentation must reside in `/docs/{lang}` (where `{lang}` is the language code, e.g., `en` for English).
+* Documentation must be clear, concise, and use [Markdown](https://commonmark.org/).
+* Architectural, workflow, and governance docs are maintained in `/docs/{lang}/`.
+* **Technical code documentation is generated from PHPDoc within the codebase.**
+* **All code changes require corresponding documentation updates.**
 
 ---
 
-## 🙌 Thank You
+## PHPDoc Standards
 
-Your contributions make Bluewater Framework better for everyone.
+**All PHP code—classes, methods, properties, interfaces, traits, constants, and variables—**must** be fully documented using Bluewater's PHPDoc standards.**
+
+* Use the official [PHPDoc templates and tag requirements](./docs/en/contribute/phpdoc.md).
+* All required fields and tag order must be strictly followed.
+* Code that does not meet documentation requirements **will not be merged**.
+* Automated and manual checks are in place for PHPDoc compliance.
+
+**See:**
+[Bluewater PHPDoc Standards](./docs/en/contribute/phpdoc.md)
+
+---
+
+## Pull Requests
+
+* Fork the repository and create a new branch for your change.
+* Follow the PR template for your contribution type (feature, bugfix, docs, etc.).
+* Ensure all code includes complete PHPDoc blocks.
+* All new and updated files must be tested and pass all CI checks.
+* Link relevant issues by number (`Closes #123`).
+* Keep PRs focused—one logical change per PR.
+* **All PRs must:**
+
+    * Update documentation as needed.
+    * Pass PHPDoc compliance and other linter/tooling checks.
+    * Reference the [PHPDoc standards](./docs/en/contribute/phpdoc.md) in the description if relevant.
+* PRs that do not meet these criteria will be reviewed, but may be closed or asked for revision.
+
+---
+
+## Issues & Feature Requests
+
+* Before submitting, search [existing issues](../issues) to avoid duplicates.
+* Provide clear, descriptive titles and context.
+* For documentation, translation, or workflow issues, specify affected files or pages.
+* Use the provided issue templates to speed up triage.
+* Be constructive—describe *why* and *how* the change is needed.
+
+---
+
+## Translation & Localization
+
+* Bluewater is a multi-language project.
+  All documentation and user-facing text should support localization.
+* Language trees are managed per `/docs/{lang}` and synchronized using internal tooling.
+* To propose a new language or update a translation, see [SYNC\_PROCESS.md](./SYNC_PROCESS.md) and our `/tools/i18n/` guides.
+* **Translation PRs must maintain structure and compliance with [PHPDoc standards](./docs/en/contribute/phpdoc.md) for code examples.**
+
+---
+
+## Sync & Tooling
+
+* Use the [i18n sync tools](./tools/i18n/) to maintain documentation structure across languages.
+* Automated scripts (see `/tools/i18n/`) help enforce structure, manage language trees, and update configuration files such as `mkdocs.yml` and `requirements.txt`.
+* See [SYNC\_PROCESS.md](./SYNC_PROCESS.md) and [Tools README](./tools/i18n/README.md) for process and usage.
+* If in doubt, open an issue before running or modifying a sync script.
+
+---
+
+## Licensing
+
+* Contributions are accepted under the [Open Software License (OSL 3.0)](./LICENSE).
+* Do not submit code you are not legally entitled to contribute.
+* All files must retain their license headers and copyright.
+
+---
+
+## Contact
+
+* For help, use [GitHub Discussions](../discussions) or open an [issue](../issues).
+* For sensitive matters, email the core team: [contact@bluewatermvc.org](mailto:contact@bluewatermvc.org)
+
+---
+
+> **All contributions—code, documentation, translations, and more—are reviewed for compliance with these standards.
+> The Bluewater PHPDoc guide is the single source of truth for code documentation.
+> Thank you for making Bluewater better!**
 
 ---
 

@@ -1,8 +1,8 @@
----
 name: 🐞 Bugfix PR
 about: Submit a bug fix or hotfix
 title: "[Bugfix] <your-title-here>"
 labels: bug, fix
+
 ---
 
 ## 🐞 Bug Description
@@ -22,11 +22,22 @@ labels: bug, fix
 
 ## Checklist
 
-- [ ] Reproduced and verified the fix
-- [ ] Tests added/updated to cover the bug
-- [ ] Docs updated if the bug was doc-related
-- [ ] Related issues linked (if any)
-- [ ] Pre-commit checks/hook ran and passed
+- [ ] This PR only addresses the specific bug(s) described.
+- [ ] Tests have been added/updated to cover the fix.
+- [ ] All affected documentation in `/docs/{lang}` is updated.
+- [ ] All code follows [PSR-12](https://www.php-fig.org/psr/psr-12/) and [Bluewater PHPDoc standards](../../docs/en/contribute/phpdoc.md).
+- [ ] `declare(strict_types=1);` present in new/updated PHP files.
+- [ ] Structure validated using `/tools/i18n/sync_docs_structure.py` (if docs affected).
+- [ ] No manual changes to `/docs/` or generated files (all structure by automation).
+- [ ] All pre-commit hooks/checks and CI/CD passed.
+- [ ] Changes comply with [CONTRIBUTING.md](../../CONTRIBUTING.md) and [SYNC_PROCESS.md](../../SYNC_PROCESS.md).
+- [ ] PR title and description are clear and actionable.
+
+---
+
+## Additional Notes
+
+<!-- Screenshots, rendered output, or reviewer notes. -->
 
 ---
 

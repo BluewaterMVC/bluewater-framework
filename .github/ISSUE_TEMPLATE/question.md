@@ -1,28 +1,29 @@
 ---
-name: ❓ Question / Support
-about: Ask a question or request help about Bluewater or its documentation
-title: "[Question]: "
+name: Question
+about: Ask a question about Bluewater usage, architecture, or contribution
+title: "[QUESTION] <short summary>"
 labels: question
+assignees: ''
 ---
 
 ## Your question
 
-Clearly describe what you need help with, or the concept you’re unclear about.
+<!-- State your question clearly. Be specific about which part of the project or docs you are referring to. -->
 
-## Reference
+## What have you tried so far?
 
-If your question is about a specific document, file, or code section, please provide the link or path here:
-
-## What you’ve tried
-
-List any steps you’ve already taken to find an answer (e.g., searched docs, checked issues, asked on a forum).
+<!-- Summarize your research, what you’ve read/tried, and why you are asking. -->
 
 ## Additional context
 
-Any screenshots, error messages, or extra background that would help us answer your question.
+<!-- Screenshots, code, links, or other details. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Please **review [existing questions and answers](../issues?q=is%3Aissue+label%3Aquestion)** before posting to avoid duplicates.
 
-*Last updated: {{DATE}}*
+By submitting this issue, you agree to follow the project’s [Code of Conduct](../../CODE_OF_CONDUCT.md) and [Contributing Guidelines](../../CONTRIBUTING.md).
+
+---
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_

@@ -1,36 +1,53 @@
 ---
-name: 🐞 Bug Report
-about: Report a problem or unexpected behavior in Bluewater documentation
-title: "[Bug]: "
+name: Bug Report
+about: Report a reproducible defect or problem in Bluewater
+title: "[BUG] <short description>"
 labels: bug
+assignees: ''
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Describe the bug
 
-**To Reproduce**
+<!-- A clear and concise description of the bug. -->
+
+## To Reproduce
+
 Steps to reproduce the behavior:
 
-1. Go to '...'
-2. Click on '...'
-3. See error
+1. ...
+2. ...
+3. ...
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Expected behavior
 
-**Screenshots or Logs**
-If applicable, add screenshots or log output to help explain your problem.
+<!-- A clear and concise description of what you expected to happen. -->
 
-**Environment (please complete the following information):**
-- OS: [e.g. Windows, macOS, Linux]
-- Browser: [if web docs]
-- Version: [e.g. Bluewater 1.0, Docs commit hash]
+## Actual behavior
 
-**Additional context**
-Add any other context about the problem here.
+<!-- What actually happened? -->
+
+## Environment
+
+- Framework version:
+- PHP version:
+- Database (type/version):
+- OS:
+- Browser (if applicable):
+
+## Screenshots or Logs
+
+<!-- If applicable, add screenshots or log output to help explain your problem. -->
+
+## Additional context
+
+<!-- Add any other context about the problem here. -->
 
 ---
 
-_Submissions are licensed under the repository’s [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)._
+Before submitting, **please check [open issues](../issues) to avoid duplicates**.
 
-*Last updated: {{DATE}}*
+By submitting this issue, you agree to follow the project’s [Code of Conduct](../../CODE_OF_CONDUCT.md) and [Contributing Guidelines](../../CONTRIBUTING.md).
+
+--
+
+_Last updated: {{DATE}} | Licensed: CC BY 4.0_
